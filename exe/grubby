@@ -2,4 +2,4 @@
 
 require 'grubby'
 
-Grubby.start
+Grubby::App.start

@@ -1,9 +1,13 @@
 require 'thor'
+require "grubby/version"
 
-class Grubby < Thor
-  desc "example", "Prints Hello Worlds"
-  def example
-    puts "Hello World!"
+module Grubby
+  class App < Thor
+    class Error < StandardError; end
+
+    desc "version", "Get gem version"
+    def version
+      puts Grubby::VERSION
+    end
   end
 end
-
