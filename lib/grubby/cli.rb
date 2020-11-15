@@ -18,6 +18,9 @@ module Grubby
     end
     map %w(--version -v) => :version
 
+    require_relative 'commands/add_entry'
+    register Grubby::Commands::AddEntry, 'add_entry', 'add_entry [SUBCOMMAND]', 'Command description...'
+
     desc 'info', 'Command description...'
     method_option :help, aliases: '-h', type: :boolean,
                          desc: 'Display usage information'
